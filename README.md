@@ -1,4 +1,4 @@
-##Creating a Hack Project
+## Creating a Hack Project
 
 See [Getting Started: Starting A Real Project](https://docs.hhvm.com/hack/getting-started/starting-a-real-project). The bsasic setup is:
 
@@ -27,6 +27,6 @@ See [Getting Started: Starting A Real Project](https://docs.hhvm.com/hack/gettin
 
 See **hack-proj** bash script. 
 
-**vendor/bin/hh-autoload** should be run to update the ./vendor/autload.hack file that maps your classes, functions, etc, to the .hack in which they are reside.
+**vendor/bin/hh-autoload** should be run to update the ./vendor/autload.hack file that maps your classes, functions, etc, to the **.hack** file in which they are reside.
 
 RESUME here:https://docs.hhvm.com/hack/getting-started/starting-a-real-project

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Taken from 
+curl https://raw.githubusercontent.com/hhvm/hhast/master/.hhconfig > .hhconfig
+mkdir bin src tests
+
+# Create hh_autoload.json using the cat command. 
+cat > hh_autoload.json <<EOF 
+{
+  "roots": [
+    "src/"
+  ],
+  "devRoots": [
+    "tests/"
+  ],
+  "devFailureHandler": "Facebook\\AutoloadMap\\HHClientFallbackHandler"
+}
+EOF
+
+composer require hhvm/hsl hhvm/hhvm-autoload
+composer require --dev hhvm/hhast hhvm/hacktest facebook/fbexpect
+
+# Create hhast-lint.json using cat
+cat > hhast-lint.json <<EOF2
+{
+  "roots": [ "bin/", "src/", "tests/" ],
+  "builtinLinters": "all"
+}
+EOF2
