@@ -1,6 +1,6 @@
 ## Creating a Hack Project
 
-See [Getting Started: Starting A Real Project](https://docs.hhvm.com/hack/getting-started/starting-a-real-project). The bsasic setup is:
+See [Getting Started: Starting A Real Project](https://docs.hhvm.com/hack/getting-started/starting-a-real-project). The basic setup found in **hack_proj** bash script does:
 
     $ curl https://raw.githubusercontent.com/hhvm/hhast/master/.hhconfig > .hhconfig
     $ mkdir bin src tests
