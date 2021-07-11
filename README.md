@@ -1,4 +1,12 @@
+## FastCGI with Nginx
+
+See [Makeing it work with nginx](https://docs.hhvm.com/hhvm/advanced-usage/fastCGI#using-fastcgi__making-it-work-with-nginx)
+
+Note: This will send .hh and .php files to the HHVM fastcgi process. I may need to specify .hack, too?
+
 ## Creating a Hack Project
+
+
 
 See [Getting Started: Starting A Real Project](https://docs.hhvm.com/hack/getting-started/starting-a-real-project). The basic setup found in **hack_proj** bash script does:
 
