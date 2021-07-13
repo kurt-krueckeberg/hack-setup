@@ -1,7 +1,9 @@
 ## Creating a Hack Project
 
+Make sure [composer](https://getcomposer.org/doc/00-intro.md#downloading-the-composer-executable) is installed.
 
-See [Getting Started: Starting A Real Project](https://docs.hhvm.com/hack/getting-started/starting-a-real-project). The basic setup found in **hack_proj** bash script does:
+See [Getting Started: Starting A Real Project](https://docs.hhvm.com/hack/getting-started/starting-a-real-project). I created **hack_proj**, a bash script that
+performs the steps discussed in this link:
 
     $ curl https://raw.githubusercontent.com/hhvm/hhast/master/.hhconfig > .hhconfig
     $ mkdir bin src tests
@@ -26,12 +28,5 @@ See [Getting Started: Starting A Real Project](https://docs.hhvm.com/hack/gettin
       "builtinLinters": "all"
     }
 
-See **hack-proj** bash script. 
+**vendor/bin/hh-autoload** should be run to update the ./vendor/autoload.hack file which maps your classes, functions, etc, to the correct **.hack** file.
 
-**vendor/bin/hh-autoload** should be run to update the ./vendor/autload.hack file that maps your classes, functions, etc, to the **.hack** file in which they are reside.
-
-RESUME here:https://docs.hhvm.com/hack/getting-started/starting-a-real-project
-
-TEST:
-
-**-p 8080** is really equivalent to just **-d hhvm.server.port=8080**. Since the **-m server** parametert must be specified, and its use implies the server type is proxygen and the default source_root is **./**, explicitly specifying **d hhvm.server.type=proxygen -d hhvm.server.source_root=./** is redundant and therefore confusing to a new user.
