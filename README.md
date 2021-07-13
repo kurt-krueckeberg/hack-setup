@@ -35,6 +35,24 @@ Client access is from **localhost:8080/index.php** or **localhost:8080/index.hh*
 
 ## Running as a Daemon
 
+[Advanced Usage: Daemon](https://docs.hhvm.com/hhvm/advanced-usage/daemon) shows to run HHVM in daemon mode with Proxygen as the backend:
+
+    hhvm -m daemon -d hhvm.server.type=proxygen -d hhvm.server.port=8080 -d hhvm.server.source_root=./subdir-for-hh-php-files
+
+## Admin Server option
+
+[Advanced Usage: Admin Server](https://docs.hhvm.com/hhvm/advanced-usage/admin-server). **Admin Server** is not really a mode. It is an additional option that allows the administrator of the
+HHVM server to query and control the HHVM server process. The server is still started in either proxygen of FastCGI mode, but these additional parameters illustrated below
+enable administration via curl:
+
+* hhvm.admin\_server.port=9001 
+* hhvm.admin\_server.password=SomePassword
+
+They are specified either in **server.ini** or passed as arguments:
+
+    hhvm -m server -p 8080 -d hhvm.admin_server.port=9001 hhvm.admin_server.password=SomePassword 
+
+Note to self: I think **-p 8080** is used in addition to the **hhvm.admin\_server.port**.
 ## Running HHVM at System Startup
 
 
